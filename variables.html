@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Variables</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery.js"></script>
+        <script type="text/javascript">
+                
+          /*  $(document).ready(function() {
+                $('.lightOff').click(function() {
+                    $('.lightOff').hide();
+                    $('.lightOn').show();
+                    $('body').css('background-color','black');
+                });
+                $('.lightOn').click(function() {
+                    $('.lightOff').show();
+                    $('.lightOn').hide();
+                    $('body').css('background-color','white');
+                });
+            });
+            */
+   
+          //  var name;
+           // name ="John";
+          //  alert(name);
+          
+            $(document).ready(function() {
+                //Button responses
+                $('.lightOff').click(function() {
+                    $('.lightOff').hide();
+                    $('.lightOn').show();
+                    $('body').css('background-color','black');
+                });
+                $('.lightOn').click(function() {
+                    $('.lightOff').show();
+                    $('.lightOn').hide();
+                    $('body').css('background-color','white');
+                });
+                
+                
+                
+                $('select').change(function() {
+                    
+                    $('body').css('background-color',this.value);
+                });
+                $('input').focus(function() {
+                    $('span').removeClass('typing');
+                });
+                $('input').blur(function() {
+                    $('span').addClass('typing');
+                });
+                
+             
+                // Hover to change
+                $('.box').mouseover(function() {
+                    
+                    $('.box').css('background-color','blue');
+                });// end hover
+                // Hover to change
+                $('.box').mouseout(function() {
+                    
+                    $('.box').css('background-color','orange');
+                });// end hover
+                
+            }); // end document
+
+        </script>
+        <style>
+            .lightOn{display:none;}
+            .typing{display:none;}
+            .box{background-color: orange; width:120px; text-align:center; padding: 10px;}
+        </style>
+    </head>
+    <body>
+        <button class="lightOn">Turn Light On</button>
+        <button class="lightOff">Turn Light Off</button>
+        <form>
+            <select>
+                <option value="white">Choose a color</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+            <br>
+            <button>Clear</button>
+            <br>
+            <input type="text" placeholder="Click to focus"/><span class="typing">Start Typing...</span>
+        </form>
+        <div class="box">
+            <h2> Hover to change</h2>
+        </div>
+    </body>
+</html>
